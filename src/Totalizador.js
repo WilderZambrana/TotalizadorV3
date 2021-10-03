@@ -6,6 +6,7 @@ function calcularTotal(cantidad, precio, estado) {
     if (estado == "UT") impuesto = 0.0665;
     subtotal = cantidad * precio + cantidad * precio * impuesto;
     if(subtotal>1000) descuento=0.03;
+    if(subtotal>3000) descuento=0.05;    
     return  subtotal - subtotal*descuento;
 }
 
