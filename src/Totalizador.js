@@ -1,5 +1,5 @@
 function calcularTotal(cantidad, precio, estado) {
-    return 2;
+    return cantidad*precio;
 }
 
 export default calcularTotal;
