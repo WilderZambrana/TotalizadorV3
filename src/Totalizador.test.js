@@ -1,4 +1,4 @@
-import calcularTotal from "./Totalizador"
+import { calcularTotal, subTotal, MontoImpuesto } from "./Totalizador";
 
 describe("Totalizador ", () => {
   it("Deberia calcular subtotal para una cantidad", () => {

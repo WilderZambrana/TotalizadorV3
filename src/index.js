@@ -1,4 +1,4 @@
-import { calcularTotal, subTotal, MontoImpuesto, descuento } from "./Totalizador";
+import { calcularTotal, subTotal, MontoImpuesto } from "./Totalizador";
 
 const cantidad_input = document.querySelector("#cantidad-input");
 const precio_input = document.querySelector("#precio-input");

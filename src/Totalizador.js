@@ -29,4 +29,4 @@ function descuento(subtotal) {
     return subtotal * descuento;
 }
 
-export { calcularTotal, subTotal, MontoImpuesto, descuento };
+export { calcularTotal, subTotal, MontoImpuesto};
