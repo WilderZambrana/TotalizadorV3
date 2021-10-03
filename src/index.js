@@ -1,4 +1,4 @@
-import { precioTotal } from "./Totalizador";
+import { calcularTotal, subTotal, MontoImpuesto, descuento } from "./Totalizador";
 
 const cantidad_input = document.querySelector("#cantidad-input");
 const precio_input = document.querySelector("#precio-input");
@@ -12,17 +12,17 @@ form.addEventListener("submit", (event) => {
   const precio = Number.parseInt(precio_input.value);
   const estado = estado_input.value;
 
-  /*const precioInicial = precioTotal(cantidad, precio);
-  const valorImpuesto = impuesto(precioInicial, estado);
-  const totalConImpu = sumar(precioInicial, valorImpuesto);
-  const valorDescuento = descuento(totalConImpu);
-  const valorFinal = restar(totalConImpu, valorDescuento);*/
+  const precioInicial = subTotal(cantidad, precio);
+  const valorImpuesto = MontoImpuesto(precioInicial, estado);
+  //const totalConImpu = sumar(precioInicial, valorImpuesto);
+  //const valorDescuento = descuento(totalConImpu);
+  const valorFinal = calcularTotal(cantidad,precio,estado);
 
   document.getElementById('cantidad').innerHTML = cantidad;
   document.getElementById('precio').innerHTML = precio;
-  /*document.getElementById('totalCantxPrec').innerHTML = precioInicial;
+  document.getElementById('totalCantxPrec').innerHTML = precioInicial;
   document.getElementById('impuesto').innerHTML = valorImpuesto;
-  document.getElementById('totalConImp').innerHTML = totalConImpu;
-  document.getElementById('descuento').innerHTML = valorDescuento;
-  document.getElementById('totalConDesc').innerHTML = valorFinal;*/
+  //document.getElementById('totalConImp').innerHTML = totalConImpu;
+  //document.getElementById('descuento').innerHTML = valorDescuento;
+  document.getElementById('totalConDesc').innerHTML = valorFinal;
 });

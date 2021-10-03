@@ -1,6 +1,6 @@
 function calcularTotal(cantidad, precio, estado) {
     let subtotal = subTotal(cantidad, precio);
-    let impuesto = subTotalconImpuesto(subtotal,estado);
+    let impuesto = MontoImpuesto(subtotal, estado);
     subtotal = subtotal + impuesto;
     return subtotal - descuento(subtotal);
 }
@@ -14,7 +14,7 @@ function impuestoEstado(estado) {
     return impuestos[estado];
 }
 
-function subTotalconImpuesto(subtotal, estado) {
+function MontoImpuesto(subtotal, estado) {
     return subtotal * impuestoEstado(estado);
 }
 
@@ -29,4 +29,4 @@ function descuento(subtotal) {
     return subtotal * descuento;
 }
 
-export default calcularTotal;
+export { calcularTotal, subTotal, MontoImpuesto, descuento };
