@@ -1,0 +1,91 @@
+<html>
+
+<body>
+  <h1>Totalizador V2</h1>
+  <form id="totalizador-form">
+    <label for="cantidad-input">Cantidad</label><br />
+    <input type="number" id="cantidad-input" /><br />
+    <label for="precio-input">Precio</label><br />
+    <input type="number" id="precio-input" /><br />
+    <div>
+      <label>Codigo de estado</label><br>
+      <select id="estado-input">
+        <option value="UT">UT</option>
+        <option value="NV">NV</option>
+        <option value="TX">TX</option>
+        <option value="AL">AL</option>
+        <option value="CA">CA</option>
+      </select>
+    </div>
+    <br>
+
+    <input type="submit" value="Calcular" />
+  </form>
+  <label><strong>Cantidad: </strong><label id="cantidad"></label></label>
+  <label><strong>Precio: </strong><label id="precio"></label></label>
+  <label><strong>Total Inicial: </strong><label id="totalCantxPrec"></label></label><br>
+  <label><strong>Impuesto: </strong><label id="impuesto"></label></label><br>
+  <label><strong>Total C/Imp: </strong><label id="totalConImp"></label></label><br>
+  <label><strong>Descuento: </strong><label id="descuento"></label></label><br>
+  <label><strong>Total final: </strong><label id="totalConDesc"></label></label>
+
+  <br><br>
+  <label><strong>Impuestos por Estado </strong></label><br>
+  <table>
+    <tr>
+      <th>Estado</th>
+      <th>Tasa de Impuesto</th>
+    </tr>
+    <tr>
+      <td>UT</td>
+      <td>6.65%</td>
+    </tr>
+    <tr>
+      <td>NV</td>
+      <td>8.00%</td>
+    </tr>
+    <tr>
+      <td>TX</td>
+      <td>6.25%</td>
+    </tr>
+    <tr>
+      <td>AL</td>
+      <td>4.00%</td>
+    </tr>
+    <tr>
+      <td>CA</td>
+      <td>8.25%</td>
+    </tr>
+  </table>
+  <label><strong>Descuentos </strong></label><br>
+  <table>
+    <tr>
+      <th>Total de la Orden</th>
+      <th>Tasa de descuento</th>
+    </tr>
+    <tr>
+      <td>1000</td>
+      <td>3%</td>
+    </tr>
+    <tr>
+      <td>3000</td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td>7000</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>10000</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>30000</td>
+      <td>15%</td>
+    </tr>
+  </table>
+
+  <script type="module" src="./src/index.js"></script>
+</body>
+
+</html>
