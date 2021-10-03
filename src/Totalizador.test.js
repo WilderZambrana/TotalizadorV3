@@ -14,7 +14,7 @@ describe("Totalizador ", () => {
     expect(calcularTotal(3, 2, "UT")).toEqual(6.399);
   });
   it("Deberia calcular total con descuento a subtotales mayores a 1000", ()=>{
-    expect(calcularTotal(3, 500, "UT")).toEqual(1551,7575);
+    expect(calcularTotal(3, 500, "UT")).toEqual(1551.7575);
   });
 
 });
