@@ -4,10 +4,14 @@ function calcularTotal(cantidad, precio, estado) {
     let descuento=0;
     if (estado == "CA") impuesto = 0.0825;
     if (estado == "UT") impuesto = 0.0665;
-    subtotal = cantidad * precio + cantidad * precio * impuesto;
+    subtotal = subTotal(cantidad,precio) + subTotal(cantidad,precio) * impuesto;
     if(subtotal>1000) descuento=0.03;
     if(subtotal>3000) descuento=0.05;    
     return  subtotal - subtotal*descuento;
+}
+
+function subTotal(cantidad,precio){
+    return cantidad*precio;
 }
 
 export default calcularTotal;
